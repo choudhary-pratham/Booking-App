@@ -38,8 +38,8 @@
 }
 .header--search{
     height: 30px;
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
+    justify-content: space-between;
     padding: 10px 0px;
     border: 3px solid rgba(255, 255, 0, 0.594);
     background-color: white;
@@ -59,6 +59,10 @@
     gap: 15px;
     align-items: center;
     cursor: pointer;
+    margin-left: 20px;
+}
+.header--search--button{
+    margin-right:20px;
 }
 .header--search--input{
     color: gray;
@@ -99,4 +103,38 @@
 }
 .option--counter--button:disabled{
     cursor: not-allowed;
+}
+
+@media only screen and (min-width:250px) and (max-width:1054px){
+    .header--list{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+    .options{
+        left: 130px;
+    }
+    .header--date--range{
+        left:30px;
+    }
+    .header--search--text{
+        font-size: 10px;
+    }
+    .header--search--input{
+        font-size: 12px;
+        width:55px;
+    }
+    .header--search--items{
+        margin-left: 5px;
+        gap:6px;
+    }
+    .header--search--button{
+        margin-right:3px;
+    }
+    .header--search{
+        gap:10px;
+        width: 95%;
+    }
+    .header{
+        padding: 7px;
+    }
 }

@@ -35,7 +35,7 @@ export default function Search() {
           <FontAwesomeIcon icon={faBed} className="header--icon" />
           <input
             type="text"
-            placeholder="where are you going?"
+            placeholder="where to?"
             className="header--search--input"
           />
         </div>
@@ -43,7 +43,10 @@ export default function Search() {
           <FontAwesomeIcon icon={faCalendarDays} className="header--icon" />
           <span
             className="header--search--text"
-            onClick={() => setShowDate(!showDate)}
+            onClick={() => {
+              setShowDate(!showDate);
+              setShow(false);
+            }}
           >
             {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
               date[0].endDate,
@@ -66,6 +69,7 @@ export default function Search() {
             className="header--search--text"
             onClick={() => {
               setShow(!show);
+              setShowDate(false);
             }}
           >
             {`${options.Adult} adult ${options.Children} children
@@ -94,7 +98,9 @@ export default function Search() {
             </div>
           )}
         </div>
-        <button className="header--button">Search</button>
+        <button className="header--button header--search--button">
+          Search
+        </button>
       </div>
     </div>
   );

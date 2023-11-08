@@ -24,3 +24,8 @@
     cursor:pointer;
     color: #1f68ce;
 }
+@media only screen and (min-width:250px) and (max-width:1054px){
+    .navbar{
+        padding:7px;
+    }
+}
